@@ -20,7 +20,7 @@ const Navbar = () => {
       <nav className="flex justify-between items-center p-4 bg-white">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <Link to="/jarvis">
+          <Link to="/">
             <Logo className="h-6 w-auto logo-spin" />
           </Link>
         </div>
@@ -36,7 +36,10 @@ const Navbar = () => {
           >
             ACCOUNT
           </Link>
-          <a href="#" className="text-nav hover:opacity-70 transition-opacity">
+          <a
+            href="https://www.gitbook.com/"
+            className="text-nav hover:opacity-70 transition-opacity"
+          >
             DOCS
           </a>
         </div>
@@ -85,7 +88,7 @@ const Navbar = () => {
             {/* Main Navigation */}
             <div className="flex flex-col items-center space-y-8">
               <Link
-                to="/jarvis"
+                to="/"
                 onClick={closeMenu}
                 className="text-nav hover:opacity-70 transition-opacity"
               >
@@ -99,7 +102,7 @@ const Navbar = () => {
                 ACCOUNT
               </Link>
               <a
-                href="#"
+                href="https://www.gitbook.com/"
                 onClick={closeMenu}
                 className="text-nav hover:opacity-70 transition-opacity"
               >
