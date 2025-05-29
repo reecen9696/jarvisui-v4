@@ -108,6 +108,8 @@ const SectionTwo: React.FC = () => {
         <PageLayout>
           <TokenPrice tokenData={TokenData} />
           <StatsGrid stats={Stats} />
+
+          <p className="text-agent-header mt-12">Agents</p>
           <AgentCard agents={Bots} />
         </PageLayout>
       </div>

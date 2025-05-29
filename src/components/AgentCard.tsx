@@ -42,8 +42,7 @@ const AgentCard: React.FC<AgentCardProps> = ({ agents }) => {
   });
 
   return (
-    <div className="mt-12">
-      <p className="text-agent-header">Agents</p>
+    <div>
       {sortedAgents.map((agent) => (
         <div
           key={agent.id}
