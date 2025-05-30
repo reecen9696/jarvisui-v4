@@ -26,10 +26,12 @@ const ChatBox: React.FC = () => {
       handleSubmit();
     }
   };
-
   const handleSubmit = () => {
     if (message.trim()) {
       console.log("Submitting message:", message);
+
+      // Close suggestions if open
+      setShowSuggestions(false);
 
       // Show loading state immediately
       setIsLoading(true);
@@ -73,6 +75,10 @@ const ChatBox: React.FC = () => {
     setShowSuggestions(false);
   };
 
+  const handleSelectSuggestion = (suggestionText: string) => {
+    setMessage(suggestionText);
+  };
+
   return (
     <div>
       {isLoading && <LoadingBox />}
@@ -81,7 +87,10 @@ const ChatBox: React.FC = () => {
       )}
 
       {showSuggestions && (
-        <ExampleSuggestions onClose={handleCloseSuggestions} />
+        <ExampleSuggestions
+          onClose={handleCloseSuggestions}
+          onSelectSuggestion={handleSelectSuggestion}
+        />
       )}
 
       <div className="border border-black p-4 flex flex-col">
