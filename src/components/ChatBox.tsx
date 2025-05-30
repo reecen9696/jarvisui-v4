@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ReactComponent as ArrowIcon } from "../assets/icons/arrow.svg";
+import { ReactComponent as QuestionIcon } from "../assets/icons/question.svg";
 import ResponseBox from "./ResponseBox";
 import LoadingBox from "./LoadingBox";
 import ExampleSuggestions from "./ExampleSuggestions";
@@ -117,8 +118,10 @@ const ChatBox: React.FC = () => {
           {/* Left circle - Toggle suggestions */}
           <button
             onClick={handleToggleSuggestions}
-            className="w-6 h-6 bg-black rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors cursor-pointer"
-          ></button>
+            className="w-6 h-6 flex items-center justify-center hover:bg-gray-200 transition-colors cursor-pointer rounded"
+          >
+            <QuestionIcon className="w-4 h-4 fill-black" />
+          </button>
 
           {/* Right circle with arrow icon - Submit button */}
           <button

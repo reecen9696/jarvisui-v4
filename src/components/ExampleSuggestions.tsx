@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ReactComponent as Close } from "../assets/icons/close.svg";
 import { ReactComponent as DownIcon } from "../assets/icons/down.svg";
+import { ReactComponent as QuestionIcon } from "../assets/icons/question.svg";
 
 interface ExampleSuggestionsProps {
   onClose: () => void;
@@ -26,7 +27,7 @@ const ExampleSuggestions: React.FC<ExampleSuggestionsProps> = ({
     <div className="border border-black p-2 py-4 flex flex-col mb-2">
       <div className="flex justify-between items-start mb-2">
         <div className="flex items-center">
-          <div className="w-3 h-3 bg-black rounded-full mr-2"></div>
+          <QuestionIcon className="w-4 h-4 fill-black mr-2" />
           <p className="text-agent-title">Example suggestions</p>
         </div>
         <button onClick={onClose}>
