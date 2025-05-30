@@ -75,14 +75,7 @@ const AccountPage: React.FC = () => {
 
   return (
     <PageLayout>
-      <button
-        onClick={() => navigate("/")}
-        className=" flex items-center text-token-price-header"
-      >
-        BACK
-      </button>
-
-      <p className="mb-16 text-token-price">Account</p>
+      <p className="mb-16 text-token-price mt-4">Account</p>
 
       <AgentStats stats={UserData} />
 

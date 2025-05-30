@@ -1,16 +1,12 @@
 import React from "react";
+import ChatBox from "../ChatBox";
 
 const SectionOne: React.FC = () => {
   return (
     <div className="snap-section">
-      <div className="flex flex-col items-center justify-center h-full bg-white">
-        <div className="max-w-4xl mx-auto md:p-8 p-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-black mb-4">
-            JARVIS
-          </h1>
-          <p className="text-lg text-gray-600 max-w-2xl">
-            Your AI trading assistant for cryptocurrency markets
-          </p>
+      <div className="flex flex-col justify-end h-full bg-white p-4 md:p-8">
+        <div className="w-full mb-6 md:mb-0 md:w-1/3 md:mx-auto">
+          <ChatBox />
         </div>
       </div>
     </div>

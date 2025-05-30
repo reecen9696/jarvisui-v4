@@ -26,6 +26,3 @@ export const addHeavyScroll = () => {
     { passive: false }
   );
 };
-
-// Call this in your main component
-// addHeavyScroll();
