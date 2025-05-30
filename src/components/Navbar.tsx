@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <>
       {/* Main Navbar */}
-      <nav className="flex justify-between items-center p-4 bg-white">
+      <nav className="flex justify-between items-center p-4 md:p-6  bg-white">
         {/* Logo */}
         <div className="flex-shrink-0">
           <Link to="/">

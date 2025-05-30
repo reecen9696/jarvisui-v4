@@ -101,7 +101,7 @@ const ChatBox: React.FC = () => {
           onChange={handleTextChange}
           onKeyDown={handleKeyDown}
           placeholder="Share your suggestion..."
-          className="resize-none outline-none text-agent-title border-none bg-transparent text-black placeholder-gray-500 overflow-hidden"
+          className="resize-none outline-none text-agent-title border-none bg-transparent text-black placeholder-black/50 overflow-hidden"
           rows={1}
           style={{
             lineHeight: "1.5",

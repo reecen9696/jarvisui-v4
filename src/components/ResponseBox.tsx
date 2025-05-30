@@ -19,9 +19,7 @@ const ResponseBox: React.FC<ResponseBoxProps> = ({ response, onClose }) => {
     <div className="border border-black p-4 mb-2">
       <div className="flex justify-between items-start">
         <div className="flex flex-row items-center mb-3">
-          <div className="w-3 h-3 bg-black rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors cursor-pointer">
-            <Code className="w-2 h-2" />
-          </div>
+          <Code className="w-4 h-4 fill-black mr-2" />
           <p className="text-stat-label ml-2">AI RESPONSE</p>
         </div>
         <button onClick={onClose}>
