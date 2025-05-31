@@ -1,22 +1,40 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import ChatBox from "../ChatBox";
 import GlobeAnimation from "../GlobeAnimation";
 import Lottie from "lottie-react";
 import scrollAnimation from "../../assets/lottie/scroll.json";
 
 const SectionOne: React.FC = () => {
+  const lottieRef = useRef<any>(null);
+
+  useEffect(() => {
+    if (lottieRef.current) {
+      lottieRef.current.setSpeed(0.5); // Slow down to 50% speed
+    }
+  }, []);
+
   return (
     <div className="snap-section">
-      <div className="flex flex-col justify-end h-full p-4 md:p-8 jusify-center ">
-        <GlobeAnimation />
-        <div className="w-full md:mb-0 md:w-1/3 md:mx-auto">
+      <div className="relative flex flex-col justify-end h-full p-4 md:p-0 ">
+        {/* Background GlobeAnimation */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <GlobeAnimation />
+        </div>
+
+        {/* Foreground content */}
+        <div className="relative z-10 w-full md:w-1/3 md:mx-auto">
           <ChatBox />
-          <div className="w-8 h-8 mx-auto mt-4">
-            <Lottie
-              animationData={scrollAnimation}
-              loop={true}
-              autoplay={true}
-            />
+          <div className="text-stat-label flex justify-center items-center flex-col mt-4">
+            <p className="block md:hidden">SWIPE</p>
+            <p className="hidden md:block">SCROLL</p>
+            <div className="w-10 h-10">
+              <Lottie
+                lottieRef={lottieRef}
+                animationData={scrollAnimation}
+                loop={true}
+                autoplay={true}
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as Logo } from "../assets/logo/logo.svg";
+import { ReactComponent as Logo } from "../assets/logo/logoblack.svg";
 
 const BottomNavbar: React.FC = () => {
   return (
