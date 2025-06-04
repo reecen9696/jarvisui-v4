@@ -115,7 +115,7 @@ const cullTimestamp = Date.now() + 24 * 60 * 60 * 1000;
 
 const SectionTwo: React.FC = () => {
   return (
-    <div className="snap-section">
+    <div className="snap-section md:snap-none">
       <div className="inner-scroll">
         <PageLayout>
           <TokenPrice tokenData={TokenData} />

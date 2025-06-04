@@ -42,6 +42,12 @@ const Navbar = () => {
           >
             DOCS
           </a>
+          <Link
+            to="/agents"
+            className="text-nav hover:opacity-70 transition-opacity"
+          >
+            AGENTS
+          </Link>
         </div>
 
         {/* Burger Menu - Hidden on desktop */}
@@ -108,6 +114,13 @@ const Navbar = () => {
               >
                 DOCS
               </a>
+              <Link
+                to="/agents"
+                onClick={closeMenu}
+                className="text-nav hover:opacity-70 transition-opacity"
+              >
+                AGENTS
+              </Link>
             </div>
           </div>
 

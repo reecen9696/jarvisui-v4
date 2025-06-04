@@ -1,51 +1,24 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Agents from "./pages/Agents";
+import Navbar from "./components/Navbar";
 import SectionOne from "./components/sections/SectionOne";
 import SectionTwo from "./components/sections/SectionTwo";
-import Navbar from "./components/Navbar";
 import AgentDetail from "./pages/AgentDetail";
 import AccountPage from "./pages/AccountPage";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <div className="App">
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Navbar />
-                  <div className="scroll-container">
-                    <SectionOne />
-                    <SectionTwo />
-                  </div>
-                </>
-              }
-            />
-
-            <Route
-              path="/account"
-              element={
-                <>
-                  <Navbar />
-                  <AccountPage />
-                </>
-              }
-            />
-
-            <Route
-              path="/:agentId"
-              element={
-                <>
-                  <Navbar />
-                  <AgentDetail />
-                </>
-              }
-            />
-          </Routes>
-        </div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/agents" element={<Agents />} />
+          <Route path="/agent/:agentId" element={<AgentDetail />} />
+          <Route path="/account" element={<AccountPage />} />
+        </Routes>
       </Router>
     </div>
   );
