@@ -21,7 +21,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex-shrink-0">
           <Link to="/">
-            <Logo className="h-6 w-auto" />
+            <Logo className="h-8 w-auto" />
           </Link>
         </div>
 

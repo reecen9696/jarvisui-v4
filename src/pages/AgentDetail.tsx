@@ -94,7 +94,7 @@ const AgentDetail: React.FC = () => {
   return (
     <PageLayout>
       <button
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/agents")}
         className=" flex items-center text-token-price-header"
       >
         BACK

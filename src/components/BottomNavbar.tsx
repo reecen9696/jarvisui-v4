@@ -12,7 +12,7 @@ const BottomNavbar: React.FC = () => {
         </div>
 
         <div className="flex-shrink-0">
-          <Logo className="h-6 w-auto" />
+          <Logo className="h-8 w-auto" />
         </div>
       </div>
     </div>
