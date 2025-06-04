@@ -31,6 +31,12 @@ const Navbar = () => {
             JARVIS
           </Link>
           <Link
+            to="/agents"
+            className="text-nav hover:opacity-70 transition-opacity"
+          >
+            AGENTS
+          </Link>
+          <Link
             to="/account"
             className="text-nav hover:opacity-70 transition-opacity"
           >
@@ -42,12 +48,6 @@ const Navbar = () => {
           >
             DOCS
           </a>
-          <Link
-            to="/agents"
-            className="text-nav hover:opacity-70 transition-opacity"
-          >
-            AGENTS
-          </Link>
         </div>
 
         {/* Burger Menu - Hidden on desktop */}
