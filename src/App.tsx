@@ -8,44 +8,46 @@ import AccountPage from "./pages/AccountPage";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Navbar />
-                <div className="scroll-container">
-                  <SectionOne />
-                  <SectionTwo />
-                </div>
-              </>
-            }
-          />
+    <div className="App">
+      <Router>
+        <div className="App">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Navbar />
+                  <div className="scroll-container">
+                    <SectionOne />
+                    <SectionTwo />
+                  </div>
+                </>
+              }
+            />
 
-          <Route
-            path="/account"
-            element={
-              <>
-                <Navbar />
-                <AccountPage />
-              </>
-            }
-          />
+            <Route
+              path="/account"
+              element={
+                <>
+                  <Navbar />
+                  <AccountPage />
+                </>
+              }
+            />
 
-          <Route
-            path="/:agentId"
-            element={
-              <>
-                <Navbar />
-                <AgentDetail />
-              </>
-            }
-          />
-        </Routes>
-      </div>
-    </Router>
+            <Route
+              path="/:agentId"
+              element={
+                <>
+                  <Navbar />
+                  <AgentDetail />
+                </>
+              }
+            />
+          </Routes>
+        </div>
+      </Router>
+    </div>
   );
 }
 

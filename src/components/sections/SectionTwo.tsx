@@ -3,6 +3,8 @@ import AgentCard from "../AgentCard";
 import StatsGrid from "../StatsGrid";
 import TokenPrice from "../TokenPrice";
 import PageLayout from "../PageLayout";
+import EvolutionProgress from "../EvolutionProgress";
+import CullCountdown from "../CullCountdown";
 
 const Bots = [
   {
@@ -89,17 +91,27 @@ const Bots = [
 ];
 
 const Stats = [
-  { name: "24H VOLUME", value: "$91.80" },
-  { name: "TOTAL TRADES", value: "1,234" },
+  { name: "ACTIVE AGENTS", value: "3" },
+  { name: "CULLED AGENTS", value: "3" },
+  { name: "IQ", value: "43" },
   { name: "ACTIVE AGENTS", value: "3" },
   { name: "24H VOLUME", value: "$91.80" },
+  { name: "SUCCESSFUL TRADES", value: "32%" },
   { name: "ACTIVE AGENTS", value: "3" },
-  { name: "24H VOLUME", value: "$91.80" },
-  { name: "TOTAL TRADES", value: "1,234" },
-  { name: "ACTIVE AGENTS", value: "3" },
+  { name: "INDICATORS", value: "MA,RSI,CMF" },
 ];
 
 const TokenData = { price: "442.03", change: "-0.01%" };
+
+const EvolutionData = {
+  currentStage: "Foetus",
+  nextStage: "Born",
+  progress: 40,
+  statusColor: "bg-statuspending",
+};
+
+// Set target timestamp for countdown (24 hours from now)
+const cullTimestamp = Date.now() + 24 * 60 * 60 * 1000;
 
 const SectionTwo: React.FC = () => {
   return (
@@ -107,9 +119,22 @@ const SectionTwo: React.FC = () => {
       <div className="inner-scroll">
         <PageLayout>
           <TokenPrice tokenData={TokenData} />
+
+          <EvolutionProgress
+            currentStage={EvolutionData.currentStage}
+            nextStage={EvolutionData.nextStage}
+            progress={EvolutionData.progress}
+            statusColor={EvolutionData.statusColor}
+          />
+
           <StatsGrid stats={Stats} />
 
-          <p className="text-agent-header mt-12">Agents</p>
+          {/* <CullCountdown targetTimestamp={cullTimestamp} /> */}
+
+          <div className=" mt-12 flex flex-row justify-between items-center">
+            <p className="text-agent-header">Agents</p>
+          </div>
+
           <AgentCard agents={Bots} />
         </PageLayout>
       </div>

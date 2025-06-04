@@ -347,7 +347,7 @@ const FBXModelPointCloud: React.FC<PointCloudProps> = ({
 };
 
 const Globe3D: React.FC<Globe3DProps> = ({
-  className = "w-[600px] h-[600px]",
+  className = "w-full h-[90%] md:w-[1000px] md:h-[1000px]",
   pointCount = 8000,
   globeRadius = 3,
   heartbeat = {

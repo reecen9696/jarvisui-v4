@@ -11,7 +11,7 @@ interface StatsGridProps {
 
 const StatsGrid: React.FC<StatsGridProps> = ({ stats }) => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-6 mt-24">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-16">
       {stats.map((stat) => (
         <div
           key={stat.name}

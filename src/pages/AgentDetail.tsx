@@ -128,7 +128,7 @@ const AgentDetail: React.FC = () => {
       </div>
       <AgentStats stats={AgentStatsData} />
 
-      <div className="mb-28">
+      <div>
         <p className="text-account-balance mb-4">P&L</p>
         <PnlLineChart data={chartData} dates={chartDates} />
       </div>
